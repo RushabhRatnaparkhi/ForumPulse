@@ -1,113 +1,99 @@
-import Image from "next/image";
+// app/page.js
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="bg-white text-gray-800">
+      {/* Header */}
+      <Header />
+
+      {/* Hero Section */}
+      <section className="bg-red-100 text-center py-20">
+        <h1 className="text-5xl font-bold text-red-600 mb-4">Join the Conversation</h1>
+        <p className="text-xl mb-8">Explore the latest blogs and trending discussions on ForumPulse.</p>
+        <a href="/forum" className="bg-red-600 text-white py-3 px-6 rounded-md hover:bg-red-700">
+          Join the Discussion
+        </a>
+      </section>
+
+      {/* Featured Blog Posts */}
+      <section className="container mx-auto py-12">
+        <h2 className="text-3xl font-bold text-red-600 mb-6">Featured Blog Posts</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-white shadow-md rounded-md overflow-hidden">
+            <img src="/images/blog1.jpg" alt="Blog 1" className="w-full h-48 object-cover" />
+            <div className="p-4">
+              <h3 className="text-xl font-bold mb-2">Blog Post Title 1</h3>
+              <p className="text-gray-600">A brief description of the blog post content goes here...</p>
+              <a href="/blog/post-1" className="text-red-600 mt-4 inline-block hover:underline">Read More</a>
+            </div>
+          </div>
+
+          <div className="bg-white shadow-md rounded-md overflow-hidden">
+            <img src="/images/blog2.jpg" alt="Blog 2" className="w-full h-48 object-cover" />
+            <div className="p-4">
+              <h3 className="text-xl font-bold mb-2">Blog Post Title 2</h3>
+              <p className="text-gray-600">A brief description of the blog post content goes here...</p>
+              <a href="/blog/post-2" className="text-red-600 mt-4 inline-block hover:underline">Read More</a>
+            </div>
+          </div>
+
+          <div className="bg-white shadow-md rounded-md overflow-hidden">
+            <img src="/images/blog3.jpg" alt="Blog 3" className="w-full h-48 object-cover" />
+            <div className="p-4">
+              <h3 className="text-xl font-bold mb-2">Blog Post Title 3</h3>
+              <p className="text-gray-600">A brief description of the blog post content goes here...</p>
+              <a href="/blog/post-3" className="text-red-600 mt-4 inline-block hover:underline">Read More</a>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      {/* Trending Forum Topics */}
+      <section className="bg-red-50 py-12">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-red-600 mb-6">Trending Forum Topics</h2>
+          <ul className="space-y-4">
+            <li className="bg-white shadow-md p-4 rounded-md">
+              <h3 className="text-xl font-bold mb-2">Forum Topic Title 1</h3>
+              <p className="text-gray-600">A brief description of the forum topic goes here...</p>
+              <a href="/forum/topic-1" className="text-red-600 mt-4 inline-block hover:underline">Join the Discussion</a>
+            </li>
+            <li className="bg-white shadow-md p-4 rounded-md">
+              <h3 className="text-xl font-bold mb-2">Forum Topic Title 2</h3>
+              <p className="text-gray-600">A brief description of the forum topic goes here...</p>
+              <a href="/forum/topic-2" className="text-red-600 mt-4 inline-block hover:underline">Join the Discussion</a>
+            </li>
+            <li className="bg-white shadow-md p-4 rounded-md">
+              <h3 className="text-xl font-bold mb-2">Forum Topic Title 3</h3>
+              <p className="text-gray-600">A brief description of the forum topic goes here...</p>
+              <a href="/forum/topic-3" className="text-red-600 mt-4 inline-block hover:underline">Join the Discussion</a>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      {/* Newsletter Signup */}
+      <section className="bg-red-600 text-white py-12">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
+          <p className="mb-8">Subscribe to our newsletter for the latest updates and discussions.</p>
+          <form className="flex justify-center">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="p-3 w-1/2 max-w-md rounded-l-md text-gray-800"
+            />
+            <button type="submit" className="bg-white text-red-600 p-3 rounded-r-md hover:bg-gray-200">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      {/* Footer */}
+      <Footer />
+    </div>
   );
 }
