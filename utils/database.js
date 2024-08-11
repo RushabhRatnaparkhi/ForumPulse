@@ -9,7 +9,7 @@ export const connectToDB = async () => {
 
     }
     try {
-        await mongoose.connect('mongodb+srv://rushuratnaparkhi2:rushuratnaparkhi2@certificategenerator.phjs0ff.mongodb.net/?retryWrites=true&w=majority&appName=CertificateGenerator', {
+        await mongoose.connect("mongodb+srv://rushuratnaparkhi2:rushuratnaparkhi2@certificategenerator.phjs0ff.mongodb.net/?retryWrites=true&w=majority&appName=CertificateGenerator", {
             dbName: "ForumPulse",
             useNewUrlParser: true,
             useUnifiedTopology: true,
